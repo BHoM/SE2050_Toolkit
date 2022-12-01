@@ -2,12 +2,15 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <FileVersion>6.0.0.0</FileVersion>
+	<AssemblyVersion>6.0.0.0</AssemblyVersion>
+    <Description>https://github.com/BHoM/SE2050_Toolkit</Description>
+	<Authors>BHoM</Authors>
+    <Copyright>Copyright © https://github.com/BHoM</Copyright>
+    <AssemblyName>SE2050_oM</AssemblyName>
+    <RootNamespace>BH.oM.SE2050</RootNamespace>
     <BaseOutputPath>..\Build\</BaseOutputPath>
   </PropertyGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\SoftwareName_oM\SoftwareName_oM.csproj" />
-  </ItemGroup>
 
   <ItemGroup>
     <Reference Include="BHoM">
