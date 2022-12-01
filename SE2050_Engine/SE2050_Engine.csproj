@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SoftwareName_oM\SoftwareName_oM.csproj" />
+    <ProjectReference Include="..\SE2050_oM\SE2050_oM.csproj" />
   </ItemGroup>
 
   <ItemGroup>

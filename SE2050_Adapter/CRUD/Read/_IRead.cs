@@ -1,4 +1,4 @@
-﻿/*
+/*
  * This file is part of the Buildings and Habitats object Model (BHoM)
  * Copyright (c) 2015 - 2022, the respective contributors. All rights reserved.
  *
@@ -20,30 +20,41 @@
  * along with this code. If not, see <https://www.gnu.org/licenses/lgpl-3.0.html>.      
  */
 
-using BH.oM.Adapters.SoftwareName;
+using BH.oM.Adapter;
 using BH.oM.Base;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BH.Adapter.SoftwareName
+namespace BH.Adapter.SE2050
 {
-    public static partial class Convert
+    public partial class SE2050Adapter : BHoMAdapter
     {
         /***************************************************/
-        /**** Public Methods                            ****/
+        /**** Adapter overload method                   ****/
         /***************************************************/
 
-        // Add methods for converting from BHoM to the specific software types
-        // Example:
-        public static ExampleObject ToSoftwareName(this BHoMObject node)
+        // This method gets called when appropriate by the Pull method contained in the base Adapter class.
+        // It gets called once per each Type.
+        protected override IEnumerable<IBHoMObject> IRead(Type type, IList ids, ActionConfig actionConfig = null)
         {
-            //Insert code for convertion
-            throw new NotImplementedException();
+            // Preferrably, different Create logic for different object types should go in separate methods.
+            // We achieve this by using the ICreate method to only dynamically dispatching to *type-specific Create implementations*
+            // In other words:
+            // if (type == typeof(SomeType1))
+            //     return ReadSomeType1(ids as dynamic);
+            // else if (type == typeof(SomeType2))
+            //     return ReadSomeType2(ids as dynamic);
+            // else if (type == typeof(SomeType3))
+            //     return ReadSomeType3(ids as dynamic);
+
+            return new List<IBHoMObject>();
         }
 
         /***************************************************/
+
     }
 }

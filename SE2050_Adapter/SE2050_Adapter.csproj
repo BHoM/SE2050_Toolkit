@@ -1,9 +1,9 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <AssemblyName>SoftwareName_Adapter</AssemblyName>
-    <RootNamespace>BH.Adapter.SoftwareName</RootNamespace>
+    <AssemblyName>SE2050_Adapter</AssemblyName>
+    <RootNamespace>BH.Adapter.SE2050</RootNamespace>
     <BaseOutputPath>..\Build\</BaseOutputPath>
   </PropertyGroup>
 
@@ -12,8 +12,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SoftwareName_Engine\SoftwareName_Engine.csproj" />
-    <ProjectReference Include="..\SoftwareName_oM\SoftwareName_oM.csproj" />
+    <ProjectReference Include="..\SE2050_Engine\SE2050_Engine.csproj" />
+    <ProjectReference Include="..\SE2050_oM\SE2050_oM.csproj" />
   </ItemGroup>
 
   <ItemGroup>

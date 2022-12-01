@@ -1,4 +1,4 @@
-﻿/*
+/*
  * This file is part of the Buildings and Habitats object Model (BHoM)
  * Copyright (c) 2015 - 2022, the respective contributors. All rights reserved.
  *
@@ -20,7 +20,6 @@
  * along with this code. If not, see <https://www.gnu.org/licenses/lgpl-3.0.html>.      
  */
 
-using BH.oM.Adapters.SoftwareName;
 using BH.oM.Base;
 using BH.oM.Base.Attributes;
 using System;
@@ -28,9 +27,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 
-namespace BH.Engine.Adapters.SoftwareName
+namespace BH.Engine.Adapters.SE2050
 {
-    public static partial class Create
+    public static partial class Compute
     {
         /***************************************************/
         /**** Public Methods                            ****/
@@ -40,11 +39,11 @@ namespace BH.Engine.Adapters.SoftwareName
         [Input("someInput1", "Description of the input. Will appear in the UI tooltip.")]
         [Input("someInput2", "Description of the input. Will appear in the UI tooltip.")]
         [Output("outputName", "Description of the output. Will appear in the UI tooltip.")]
-        public static ExampleObject ExampleCreateMethod(string someInput1, int someInput2)
+        public static void ExampleComputeMethod(string someInput1, string someInput2)
         {
             // This method will appear in every UI (e.g. Grasshopper) as a component.
-            // Find it using the CTRL+Shift+B search bar, or by navigating the `Create` component (Engine tab) right click menu.
-            return new ExampleObject() { SomeStringProperty = someInput1, SomeNumberProperty = someInput2 };
+            // Find it using the CTRL+Shift+B search bar, or by navigating the `Compute` component (Engine tab) right click menu.
+            throw new NotImplementedException();
         }
 
         /***************************************************/
